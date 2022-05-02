@@ -3,13 +3,18 @@ const Engineer = require ('../lib/engineer');
 const Manager = require ('../lib/manager');
 const Intern = require ('../lib/intern');
 
-function generateEmpCards (teamArray) {
+
+// Function for generating HTML 
+function generateHTML(teamArray){
     let cardHTML='';
     let empSpecificElement = '';
     let empSpecificTitle = '';
 
+    //Employee specific card HTML  generators 
+
     for (i=1;i<= teamArray.length-1; i++) {
 
+        //Depending on the role, coming up employee specific Tag and Icon
         switch (teamArray[i].getRole()) {
             case 'manager':
                 empSpecificElement = `Office Number : ${teamArray[i].getOfficeNumber()}`;
@@ -44,10 +49,6 @@ function generateEmpCards (teamArray) {
         </div>
         `
     }
-    return (cardHTML);
-}
-
-function generateHTML(teamArray){
 
     return `<html lang="en">
     <head>
@@ -62,8 +63,8 @@ function generateHTML(teamArray){
     <h1 class="display-4 text-center">${teamArray[0]}</h1>
     </div>
     <body>
-        <div class = 'col-lg-12 row custom-deck justify-content-center', id='card-tile'> <!-- add team cards -->
-        ${generateEmpCards(teamArray)}
+        <div class = 'col-lg-12 row custom-deck justify-content-center', id='card-tile'> 
+        ${cardHTML}
         </div>
         <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
