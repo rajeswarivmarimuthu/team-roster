@@ -143,6 +143,7 @@ async function init() {
     console.log(teamArray);
 }
 
+//function to ask employee questions 
 async function employeePrompt() {
     let empDetails; 
     await inquirer.prompt(employeeQuestions)

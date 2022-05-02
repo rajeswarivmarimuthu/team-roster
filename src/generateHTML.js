@@ -59,8 +59,8 @@ function generateHTML(teamArray){
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
         <title>Team Roster</title>
     </head>
-    <div class="jumbotron">
-    <h1 class="display-4 text-center">${teamArray[0]}</h1>
+    <div class="jumbotron" style="background-color: #0000fb">
+    <h1 class="display-4 text-white text-center">${teamArray[0]}</h1>
     </div>
     <body>
         <div class = 'col-lg-12 row custom-deck justify-content-center', id='card-tile'> 
