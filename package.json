@@ -1,0 +1,28 @@
+{
+  "name": "team-roster",
+  "version": "1.0.0",
+  "description": "team-roster is to build a team roster based on user input for a team ",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com-rajeswarivmarimuthu:rajeswarivmarimuthu/team-roster.git"
+  },
+  "keywords": [
+    "team-roster",
+    "jest",
+    "node.js"
+  ],
+  "author": "Rajeswari Marimuthu",
+  "license": "ISC",
+  "dependencies": {
+    "inquirer": "^8.2.4",
+    "jest": "^28.0.3"
+  }
+}
